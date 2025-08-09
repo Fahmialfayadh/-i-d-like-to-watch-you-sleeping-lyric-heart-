@@ -1,7 +1,6 @@
 import os
 import time
 import HEART
-# Lirik yang digunakan (tidak berubah)
 lirik = [
     ("hal yang paling kusuka didekatmu", 2),
     ("kau adalah orang favoritku", 1.4),
@@ -33,8 +32,9 @@ def main():
     print("Nomor satu")
     print("Nomor")
 
-    # Tahan tampilan akhir sejenak
+    # delay lirik ke heart
     time.sleep(0.2)
+    # heart
     HEART.buat_peta_hati()
     HEART.jalankan_animasi(HEART.buat_peta_hati(), HEART.NUMBER_COUNTS, HEART.HEART_WIDTH, HEART.HEART_HEIGHT)
     HEART.tampilkan_pesan_akhir((HEART.buat_peta_hati(), HEART.NUMBER_COUNTS, HEART.HEART_WIDTH, HEART.HEART_HEIGHT), HEART.HEART_WIDTH)
@@ -42,6 +42,6 @@ def main():
 
 
 
-# Menjalankan fungsi utama
+
 if __name__ == "__main__":
     main()

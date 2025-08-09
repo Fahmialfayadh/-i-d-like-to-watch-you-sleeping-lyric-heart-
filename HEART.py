@@ -14,10 +14,7 @@ HEART_HEIGHT = 21
 HEART_WIDTH = 40
 
 def buat_peta_hati():
-    """
-    Fungsi ini menghitung semua koordinat (indeks baris dan kolom)
-    yang membentuk gambar hati dan mengembalikannya sebagai sebuah list.
-    """
+    
     positions = []
     for y in range(10, -10, -1):
         for x in range(-20, 20):

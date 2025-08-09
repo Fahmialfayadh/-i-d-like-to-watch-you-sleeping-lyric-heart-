@@ -2,9 +2,7 @@ import time
 import os
 import random
 
-# == KONFIGURASI ==
-# Konfigurasi kuota angka dan ukuran hati bisa disimpan di sini
-# agar mudah diubah.
+# x, y = angka, banyak angka
 NUMBER_COUNTS = [
     ('2', 60),
     ('3', 70),
@@ -24,17 +22,14 @@ def buat_peta_hati():
     for y in range(10, -10, -1):
         for x in range(-20, 20):
             if ((x * 0.075)**2 + (y * 0.15)**2 - 1.01)**3 - (x * 0.075)**2 * (y * 0.15)**3 <= 0:
-                # Mengubah koordinat grid (y: 10..-9, x: -20..19) menjadi indeks list (baris: 0..20, kolom: 0..39)
                 row_idx = 10 - y
                 col_idx = 20 + x
                 positions.append((row_idx, col_idx))
-    time.sleep(0.3) # Jeda singkat setelah peta dibuat
+    time.sleep(0.3) 
     return positions
 
 def jalankan_animasi(posisi, kuota, lebar, tinggi):
-    """
-    Menjalankan animasi utama di terminal, mengisi kanvas sesuai
-    posisi dan kuota yang diberikan. Mengembalikan kanvas final."""
+    
 
     display_canvas = [[" " for _ in range(lebar)] for _ in range(tinggi)]
     current_number_index = 0
